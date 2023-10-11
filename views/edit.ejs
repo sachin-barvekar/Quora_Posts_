@@ -1,0 +1,13 @@
+<%- include("includes/head.ejs"); %>
+
+<body>
+    
+    <h2>Edit ur post</h2>
+    <p>Post id: <%= post.id %></p>
+    <p>Post username: <%= post.username%></p>
+    <form method="POST" action="/posts/<%=post.id %>?_method=PATCH">
+        <textarea name="content" id="" cols="30" rows="10"><%= post.content%></textarea>
+        <br>
+        <button>Submit</button>
+    </form>
+</body>
